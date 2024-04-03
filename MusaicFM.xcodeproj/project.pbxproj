@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -310,8 +310,6 @@
 				TargetAttributes = {
 					E1CF25981DD7D8D500441255 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = YE33ZK7Z99;
-						ProvisioningStyle = Automatic;
 					};
 					E1FA39671DDA3FBE00186BE2 = {
 						CreatedOnToolsVersion = 8.2;
@@ -527,10 +525,11 @@
 		E1CF25A41DD7D8D500441255 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				DEVELOPMENT_TEAM = 5S8HRB386G;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -545,11 +544,11 @@
 		E1CF25A51DD7D8D500441255 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Dennis Oberhoff (YE33ZK7Z99)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				DEVELOPMENT_TEAM = 5S8HRB386G;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;

@@ -18,8 +18,6 @@
     if (self) {
         self.rows = 4;
         self.delays = 5;
-        self.lastfmUser = @"obrhoff";
-        self.lastfmTag = @"HipHop";
     }
     return self;
 }
@@ -66,8 +64,10 @@
 
 - (void)synchronize
 {
-    ScreenSaverDefaults* defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.preferences"];
-    NSData* stored = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+    ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:bundleIdentifier];
+    NSData *stored = [NSKeyedArchiver archivedDataWithRootObject:self];
+    
     [defaults setObject:stored forKey:@"settings"];
     [defaults synchronize];
 }
@@ -78,7 +78,8 @@
     static Preferences* preferences;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ScreenSaverDefaults* defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.preferences"];
+        NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+        ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:bundleIdentifier];
         NSData* prefData = [defaults objectForKey:@"settings"];
         preferences = [NSKeyedUnarchiver unarchiveObjectWithData:prefData];
         if (!preferences)
